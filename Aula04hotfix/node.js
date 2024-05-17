@@ -1,3 +1,5 @@
-function numero(id) {
-    alert("Você clicou no botão com ID: " + id);
+
+function numero(parametroValor){
+    const visor = document.getElementById('visor')
+    visor.value = visor.value + parametroValor;
 }

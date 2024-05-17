@@ -1,0 +1,20 @@
+body {
+
+    background-color: lightslategrey;
+    font-size: 40px;
+}
+
+.viso{
+    height: 60px;
+    width: 300px;
+    font-size: 20px;
+}
+
+.botaor{
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #6c6d6c;
+    border-color: #c0c1c2;
+    
+}
