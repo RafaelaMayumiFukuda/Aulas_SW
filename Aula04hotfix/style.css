@@ -1,6 +1,6 @@
 body {
 
-    background-color: lightslategrey;
+    background-color: rgb(198, 215, 231);
     font-size: 40px;
 }
 
@@ -8,13 +8,25 @@ body {
     height: 60px;
     width: 300px;
     font-size: 20px;
+    margin: auto;
+    border: 10px solid rgb(125, 255, 142);
+    border-radius: 20px 20px 0px 0px;
 }
 
 .botaor{
     font-size: 20px;
     width: 60px;
     height: 60px;
-    background-color: #6c6d6c;
-    border-color: #c0c1c2;
+    background: rgba(94, 182, 233, 0.3);
     
 }
+
+.margem{
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    border: 10px solid rgb(252, 180, 255);
+    border-radius: 20px;
+    
+}
+
