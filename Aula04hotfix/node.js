@@ -1,5 +1,5 @@
 var total = 0;
-var operação = "";
+var operacao = "";
 var valorAtual = 0;
 var calculo = "";
 
@@ -7,8 +7,7 @@ function numero(valor){
 
     //função de adicionar o elemento ao visor
     const visor = document.getElementById("visor");
-    visor.value = visor.value + valor;
-
+    
     //função para limpar tudo no visor
     if(valor=="CE"){
         visor.value = "0";
@@ -18,7 +17,7 @@ function numero(valor){
     }
 
     //
-    if(visor.value.includes(".")==true && valor=="."){
+    if(visor.value.includes('.')==true && valor=="."){
         return 0;
     }
     if(visor.value=="0" && valor=="0"){
@@ -33,8 +32,8 @@ function numero(valor){
 
     //função para apagar
     if(valor=="apagar"){
-        valor = visor.value.slice(0, -7)
-        visor.value = valor;
+        valor = visor.value.slice(0, -1)
+        viso.value = valor;
         if(visor.value==""){
             visor.value = 0;
         }
@@ -51,9 +50,14 @@ function numero(valor){
         operação = valor;
         visor.value - 0;
         return 0;
-    }if(){
+    }else{
         valorAtual = visor.value;
         calculo = parseFloat(total) + operacao + parseFloat(valorAtual)
+        total = parseFloat(total);
+    }
+    if (valor=="total"){
+        valorAtual = visor.value;
+        calculo = parseFloat(total) + operacao + parseFloat(valorAtual);
         total = eval(calculo);
         total = parseFloat(total);
         visor.value = total;
@@ -61,6 +65,6 @@ function numero(valor){
     }else{
         valorAtual = visor.value;
     }
-
-    visor.value = (viso.value = "" + valor);
+    visor.value = (visor.value = "" + valor);
+    
 }
