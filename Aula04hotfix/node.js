@@ -1,23 +1,19 @@
+//var global pode ser utilizada em qualquer hora, já a var local somente dentro de uma função específica
 var total = 0;
-var operacao = "";
+var operacao = ""; //string
 var valorAtual = 0;
-var calculo = "";
-
+var calculo = ""; //juntar todas var
+ 
 function numero(valor){
-
-    //função de adicionar o elemento ao visor
     const visor = document.getElementById("visor");
-    
-    //função para limpar tudo no visor
-    if(valor=="CE"){
+    if (valor=="CE"){
         visor.value = "0";
         total = 0;
         valorAtual = 0;
         return 0;
-    }
-
-    //
-    if(visor.value.includes('.')==true && valor=="."){
+    } //return 0; ignora o resto das informações, sai da função
+ 
+    if(visor.value.includes(".")==true && valor=="."){
         return 0;
     }
     if(visor.value=="0" && valor=="0"){
@@ -29,33 +25,32 @@ function numero(valor){
     if(visor.value=="" && valor=="0"){
         return 0;
     }
-
-    //função para apagar
-    if(valor=="apagar"){
+    if(valor=='apagar'){
         valor = visor.value.slice(0, -1)
-        viso.value = valor;
+        visor.value = valor;
         if(visor.value==""){
             visor.value = 0;
         }
         return 0;
     }
-
-    //
-    if (valor=="-" || valor=="+" || valor=="*" || valor=="/"){
+ 
+    if(valor=="-" || valor=="+" || valor=="*" || valor=="/"){
         if(visor.value != 0){
             valorAtual = visor.value;
             valorAtual = parseFloat(valorAtual);
             total = valorAtual;
         }
-        operação = valor;
-        visor.value - 0;
+        operacao = valor;
+        visor.value = 0;
         return 0;
+       
     }else{
         valorAtual = visor.value;
-        calculo = parseFloat(total) + operacao + parseFloat(valorAtual)
-        total = parseFloat(total);
+        calculo = parseFloat(total) + operacao + parseFloat(valorAtual);
+        total = parseFloat(calculo);
     }
-    if (valor=="total"){
+ 
+    if(valor=="total"){
         valorAtual = visor.value;
         calculo = parseFloat(total) + operacao + parseFloat(valorAtual);
         total = eval(calculo);
@@ -65,6 +60,6 @@ function numero(valor){
     }else{
         valorAtual = visor.value;
     }
-    visor.value = (visor.value = "" + valor);
-    
+    visor.value = (visor.value + '' + valor);
+ 
 }
