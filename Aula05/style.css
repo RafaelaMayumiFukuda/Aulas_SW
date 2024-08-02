@@ -1,7 +1,28 @@
-.btestilo{
+body{
+    background-color: rgb(248, 215, 172);
+}
 
-    background-color: rgb(250, 199, 255);
+.btestilo{
+    height: 40px;
+    width: 300px;
     border: none;
-    border-radius: 20px;
-   color: rgb(76, 117, 93);
+    border-radius: 5px;
+}
+
+.d1{
+
+    width: 100%;
+}
+
+.d2{
+    width: 100%;
+}
+
+.stint{
+    height: 40px;
+    width: 300px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
 }
