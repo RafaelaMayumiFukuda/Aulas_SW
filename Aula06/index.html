@@ -1,0 +1,129 @@
+<!--<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Número aleatorio</title>
+    
+</head>
+
+<body>
+
+
+    <div class="form">
+        <label for="campoPalpite">Digite seu palpite: </label>
+        <input type="number" min="1" max="100" required id="campoPalpite" class="campoPalpite" />
+        <input type="submit" value="Enviar" class="enviarPalpite" />
+    </div>
+
+    <div class="resultParas">
+        <p class="palpites"></p>
+        <p class="ultimoResultado"></p>
+        <p class="baixoOuAlto"></p>
+    </div>
+
+    <script>
+        // Aqui que vc coloca seu código JavaScript
+        // Declaração das variáveis
+        let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+
+        const palpites = document.querySelector(".palpites");
+        const ultimoResultado = document.querySelector(".ultimoResultado");
+        const baixoOuAlto = document.querySelector(".baixoOuAlto");
+
+        const enviarPalpite = document.querySelector(".enviarPalpite");
+        const campoPalpite = document.querySelector(".campoPalpite");
+
+        let contadorPalpite = 1;
+        let resetarBotao;
+
+        enviarPalpite.addEventListener("click", checarPalpite);
+
+        function checarPalpite() {
+            const palpiteUsuario = Number(campoPalpite.value);
+            if (contadorPalpite === 1) {
+                palpites.textContent = "Palpites anteriores: ";
+            }
+
+            palpites.textContent += palpiteUsuario + " ";
+
+            if (palpiteUsuario === numeroAleatorio) {
+                ultimoResultado.textContent = "Parabéns! Você acertou!";
+                ultimoResultado.style.backgroundColor = "green";
+                baixoOuAlto.textContent = "";
+                setGameOver();
+            } else if (contadorPalpite === 10) {
+                ultimoResultado.textContent = "!!!GAME OVER!!!";
+                baixoOuAlto.textContent = "";
+                setGameOver();
+            } else {
+                ultimoResultado.textContent = "Errado!";
+                ultimoResultado.style.backgroundColor = "red";
+                if (palpiteUsuario < numeroAleatorio) {
+                    baixoOuAlto.textContent = "O último palpite foi muito baixo!";
+                } else if (palpiteUsuario > numeroAleatorio) {
+                    baixoOuAlto.textContent = "O último palpite foi muito alto!";
+                }
+            }
+
+            contadorPalpite++;
+            campoPalpite.value = "";
+            campoPalpite.focus();
+        }
+
+        function setGameOver() {
+            campoPalpite.disabled = true;
+            enviarPalpite.disabled = true;
+            resetarBotao = document.createElement("button");
+            resetarBotao.textContent = "Começar novo jogo";
+            document.body.appendChild(resetarBotao);
+            resetarBotao.addEventListener("click", resetGame);
+        }
+
+        function resetGame() {
+            contadorPalpite = 1;
+            const resetParas = document.querySelectorAll(".resultParas p");
+            for (const resetPara of resetParas) {
+                resetPara.textContent = "";
+            }
+
+            resetarBotao.parentNode.removeChild(resetarBotao);
+            campoPalpite.disabled = false;
+            enviarPalpite.disabled = false;
+            campoPalpite.value = "";
+            campoPalpite.focus();
+            ultimoResultado.style.backgroundColor = "white";
+            numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+        }
+
+    </script>
+</body>
+
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="code.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="main">
+        <section class="game">
+          <h1>Jogo de Adivinha</h1>
+          <div class="status" id="status">Adivinhe o número sorteado</div>
+          <div class="tentativa" id="tentativa">Tentativa: 0</div>
+          <form class="form" id="form">
+            <label for="chute">Chute um número entre 0 e 100</label>
+            <input type="number" name="chute" id="chute" />
+            <button id="btnVerifica">Verificar</button>
+          </form>
+        </section>
+      </main>
+</body>
+</html>
+
+
+<!--Não fizemos o codigo, pegamos de sites para tentar entender e se basear, mas não entendemos como faz no jquery-->
