@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Uso do jQuery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Exemplo de Uso do jQuery</h1>
+    </header>
+
+    <main>
+      <section id="dom-manipulation">
+        <h2>Manipulação de DOM</h2>
+        <button id="add-item">Adicionar Item</button>
+        <ul id="item-list"></ul>
+      </section>
+
+      <section id="animations">
+        <h2>Animações</h2>
+        <button id="fade-out">Fade Out</button>
+        <div id="box" class="box">Caixa</div>
+      </section>
+
+      <section id="events">
+        <h2>Eventos</h2>
+        <input type="text" id="text-input" placeholder="Digite algo" />
+        <p id="display-text"></p>
+      </section>
+
+      <section id="ajax">
+        <h2>AJAX</h2>
+        <button id="load-data">Carregar Dados</button>
+        <div id="data-output"></div>
+      </section>
+
+      <section id="attribute-manipulation">
+        <h2>Manipulação de Atributos</h2>
+        <img
+          id="image"
+          src="https://via.placeholder.com/150"
+          alt="Imagem Exemplo"
+        />
+        <button id="change-src">Mudar Imagem</button>
+      </section>
+
+      <section id="class-management">
+        <h2>Gerenciamento de Classes</h2>
+        <div class="box" id="colored-box">Clique para mudar a cor</div>
+      </section>
+
+      <section id="form-validation">
+        <h2>Validação de Formulário</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Seu nome" required />
+          <input type="email" id="email" placeholder="Seu email" required />
+          <button type="submit">Enviar</button>
+        </form>
+        <div id="form-message"></div>
+      </section>
+
+      <section id="list-manipulation">
+        <h2>Manipulação de Listas</h2>
+        <button id="sort-list">Ordenar Lista</button>
+        <ul id="sortable-list">
+          <li>Banana</li>
+          <li>Maçã</li>
+          <li>Laranja</li>
+        </ul>
+      </section>
+
+      <section id="slide-effect">
+        <h2>Efeito de Deslizar</h2>
+        <button id="toggle-panel">Mostrar/Ocultar Painel</button>
+        <div id="slide-panel" style="display: none">
+          Este é um painel que pode ser mostrado ou ocultado.
+        </div>
+      </section>
+
+      <section id="dropdown">
+        <h2>Dropdown Simples</h2>
+        <button id="toggle-dropdown">Mostrar Dropdown</button>
+        <div id="dropdown-menu" style="display: none">
+          <ul>
+            <li>Opção 1</li>
+            <li>Opção 2</li>
+            <li>Opção 3</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cookies">
+        <h2>Manipulação de Cookies</h2>
+        <button id="set-cookie">Definir Cookie</button>
+        <button id="get-cookie">Obter Cookie</button>
+        <div id="cookie-message"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Exemplo de jQuery</p>
+    </footer>
+  </body>
+</html>
