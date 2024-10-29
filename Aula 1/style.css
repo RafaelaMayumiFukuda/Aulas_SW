@@ -1,0 +1,54 @@
+main{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+
+}
+
+form{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container{
+
+    border: 1px solid gray;
+    border-radius: 25px;
+    padding: 20px;
+    background-color:rgb(156, 233, 156);
+
+}
+
+input[type="text"]{
+    border-radius: 20px;
+}
+
+input[type="submit"]{
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.bnt-mav{
+    background-color: aqua;
+    width: 100px;
+    height: 40px;
+    border: none;
+}
+
+.drop{
+    display: none;
+}
+
+.drop-down input:focus ~ .drop{
+    display: block;
+}
+
+header li button{
+    width: 100px;
+    height: 40px;
+    border: none;
+}
