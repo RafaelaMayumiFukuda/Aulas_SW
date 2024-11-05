@@ -39,11 +39,20 @@ input[type="submit"]{
     border: none;
 }
 
-.drop{
+.drop1{
     display: none;
 }
 
-.drop-down input:focus ~ .drop{
+.drop2{
+    display: none;
+}
+
+
+.drop-down1 input:focus ~ .drop1{
+    display: block;
+}
+
+.drop-down2 input:focus ~ .drop2{
     display: block;
 }
 
@@ -51,4 +60,9 @@ header li button{
     width: 100px;
     height: 40px;
     border: none;
+   
+}
+
+header{
+    display: flex;
 }
