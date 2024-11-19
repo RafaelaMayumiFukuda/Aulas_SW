@@ -1,7 +1,7 @@
 <form action="?page-salvar_modelos" method="post">
 <input type="hidden" name="acao" value="cadastrar">
 
-<div class="card" style="width: 30rem;">
+<div class="card"  style="width: 30rem;">
 
     <div class="container mb-3">
     <label class="mt-3">Modelo</label>
